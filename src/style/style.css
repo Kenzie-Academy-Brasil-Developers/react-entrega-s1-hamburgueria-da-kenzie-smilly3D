@@ -1,0 +1,20 @@
+.menuProduct {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cardMenu {
+  border: 1px white solid;
+  margin: 10px;
+  width: 230px;
+}
+
+.cardSale {
+  border: 1px white solid;
+  margin: 10px;
+  width: 230px;
+}
+
+.menuSale {
+  display: flex;
+  flex-wrap: wrap;
+}
