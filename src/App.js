@@ -5,6 +5,7 @@ import Sales from "./components/Sales/index";
 import MenuContainer from "./components/MenuContainer";
 import TotalCar from "./components/CarTotal";
 import Filter from "./components/Filter";
+import Logo from "./images/logo.png";
 
 function App() {
   const [products, setProducts] = useState([
@@ -52,21 +53,28 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="container">
+      <header className="header">
+        <div className="logo">
+          <img src={Logo} alt="Minha Figura" />
+        </div>
+      </header>
+      <main className="main">
         <div>
           <Filter showProducts={showProducts} reset={reset} />
         </div>
         <div className="menuProduct">
           <MenuContainer products={products} handleClick={handleClick} />
         </div>
+      </main>
+      <aside className="aside">
         <h2>
           total Price: <TotalCar currentSale={currentSale} />
         </h2>
         <div className="menuSale">
           <Sales currentSale={currentSale} />
         </div>
-      </header>
+      </aside>
     </div>
   );
 }
